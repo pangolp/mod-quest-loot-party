@@ -1,0 +1,17 @@
+[worldserver]
+
+#
+#    QuestParty.Message
+#        Description: Enable or Disable the Quest Loot Party Message.
+#        Default:     QuestParty.Message   = 1
+#
+
+QuestParty.Message = 1
+
+#
+#    QuestParty.Enable
+#        Description: Enable or Disable the Quest Loot Party Module.
+#        Default:     QuestParty.Enable   = 1
+#
+
+QuestParty.Enable = 1
