@@ -25,7 +25,7 @@ public:
         }
     }
 
-    void OnBeforeFillQuestLootItem(Player* player, LootItem& item) override
+    void OnBeforeFillQuestLootItem(Player* /*player*/, LootItem& item) override
     {
         if (sConfigMgr->GetOption<bool>("QuestParty.Enable", false))
         {
