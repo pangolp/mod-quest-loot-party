@@ -29,7 +29,12 @@ public:
     {
         if (sConfigMgr->GetOption<bool>("QuestParty.Enable", false))
         {
-            item.freeforall = true;
+            ItemTemplate const* itemTemplate = sObjectMgr->GetItemTemplate(item.itemid);
+
+            if (itemTemplate->Quality == ITEM_QUALITY_NORMAL)
+            {
+                item.freeforall = true;
+            }
         }
     }
 };
