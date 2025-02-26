@@ -17,7 +17,7 @@ class PlayerLootParty : public PlayerScript
 public:
     PlayerLootParty() : PlayerScript("PlayerLootParty") { }
 
-    void OnLogin(Player* player) override
+    void OnPlayerLogin(Player* player) override
     {
         if (sConfigMgr->GetOption<bool>("QuestParty.Message", false))
         {
@@ -25,7 +25,7 @@ public:
         }
     }
 
-    void OnBeforeFillQuestLootItem(Player* /*player*/, LootItem& item) override
+    void OnPlayerBeforeFillQuestLootItem(Player* /*player*/, LootItem& item) override
     {
         if (sConfigMgr->GetOption<bool>("QuestParty.Enable", false))
         {
