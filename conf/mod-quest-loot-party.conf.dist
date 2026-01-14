@@ -3,7 +3,8 @@
 #
 #    QuestParty.Message
 #        Description: Enable or Disable the Quest Loot Party Message.
-#        Default:     QuestParty.Message   = 1
+#        Options: 0 or 1
+#        Default: 1 (enabled)
 #
 
 QuestParty.Message = 1
@@ -11,7 +12,8 @@ QuestParty.Message = 1
 #
 #    QuestParty.Enable
 #        Description: Enable or Disable the Quest Loot Party Module.
-#        Default:     QuestParty.Enable   = 1
+#        Options: 0 or 1
+#        Default: 1 (enabled)
 #
 
 QuestParty.Enable = 1
