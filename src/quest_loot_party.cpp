@@ -19,7 +19,7 @@ public:
 
     void OnPlayerLogin(Player* player) override
     {
-        if (sConfigMgr->GetOption<bool>("QuestParty.Message", false))
+        if (sConfigMgr->GetOption<bool>("QuestParty.Message", true))
         {
             ChatHandler(player->GetSession()).PSendSysMessage(HELLO_QUEST_PARTY);
         }
@@ -27,7 +27,7 @@ public:
 
     void OnPlayerBeforeFillQuestLootItem(Player* /*player*/, LootItem& item) override
     {
-        if (sConfigMgr->GetOption<bool>("QuestParty.Enable", false))
+        if (sConfigMgr->GetOption<bool>("QuestParty.Enable", true))
         {
             ItemTemplate const* itemTemplate = sObjectMgr->GetItemTemplate(item.itemid);
 
