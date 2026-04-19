@@ -7,11 +7,6 @@
 #include "Config.h"
 #include "Chat.h"
 
-enum QuestLootParty
-{
-    HELLO_QUEST_PARTY = 35440
-};
-
 class PlayerLootParty : public PlayerScript
 {
 public:
@@ -19,9 +14,10 @@ public:
 
     void OnPlayerLogin(Player* player) override
     {
-        if (sConfigMgr->GetOption<bool>("QuestParty.Message", true))
+        if ((sConfigMgr->GetOption<bool>("QuestParty.Message", true)) && (sConfigMgr->GetOption<bool>("QuestParty.Enable", true)))
         {
-            ChatHandler(player->GetSession()).PSendSysMessage(HELLO_QUEST_PARTY);
+            if (WorldSession* session = player->GetSession())
+                ChatHandler(session).PSendModuleSysMessage("mod-quest-loot-party", 1);
         }
     }
 
